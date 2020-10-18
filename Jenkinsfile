@@ -5,19 +5,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..pipeline'
-                whoami
+                sh '''#!/bin/bash
+
+                    echo "Hello from bash"
+                    echo "Who I'm $SHELL"
+                '''
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..pipeline'
                 ls
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....pipeline'
-                pwd
             }
         }
     }
