@@ -4,17 +4,20 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building..pipeline'
+                whoami
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Testing..pipeline'
+                ls
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying....pipeline'
+                pwd
             }
         }
     }
