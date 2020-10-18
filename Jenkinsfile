@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..pipeline'
                 sh '''#!/bin/bash
-
+                    pwd
                     echo "Hello from bash"
                     echo "Who I'm $SHELL"
                 '''
@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                ls
+                echo 'Testing Pipeline'
             }
         }
         stage('Deploy') {
