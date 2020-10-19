@@ -10,7 +10,12 @@ build 'my-first-pro'
 
 pwd()
 
-//To run arbitrary pipeline script
+//To write a shell script
+
+sh '''ls
+pwd'''
+
+//To run arbitrary pipeline "groovy" script
 
 script {
     // some block
