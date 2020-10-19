@@ -16,7 +16,10 @@ pipeline {
             steps {
                 echo 'Testing Pipeline'
                 echo myvar
-                pwd()
+                script { 
+                    ls
+                    pwd
+                }
             }
         }
         stage('Deploy') {
