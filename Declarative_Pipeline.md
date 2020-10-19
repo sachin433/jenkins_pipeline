@@ -25,3 +25,9 @@ container('my-container') {
     // some block
 }
 
+//To pass interactive input:
+input message: 'Please pass value', parameters: [string(defaultValue: 'Dummy', description: '', name: 'val1', trim: false)]
+
+//To print variable in pipeline
+echo userInput
+
