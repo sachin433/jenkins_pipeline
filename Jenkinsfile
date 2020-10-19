@@ -17,8 +17,12 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing Pipeline'
-                echo myvar
-                
+                //To set variable and use it
+                withEnv(['myvar=123']) {
+               echo myvar
+                  }
+                //To write in a file present in workspace
+                writeFile file: 'test1', text: 'Hi there.I am testing'
             }
         }
         stage('Deploy') {
