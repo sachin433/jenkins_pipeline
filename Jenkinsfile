@@ -10,6 +10,8 @@ pipeline {
                     echo "Hello from bash"
                     echo "Who I'm $SHELL"
                 '''
+                //Building other job
+                build 'my-first-pro'
             }
         }
         stage('Test') {
