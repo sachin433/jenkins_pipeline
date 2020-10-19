@@ -42,3 +42,39 @@ input message: 'Please pass value', parameters: [string(defaultValue: 'Dummy', d
 
 echo userInput
 
+//Parallel execution in pipeline
+
+A) SCRIPTED WAY
+
+ parallel firstBranch: {
+        // do something
+    }, secondBranch: {
+        // do something else
+    }
+
+B) DECLARATIVE WAY:
+
+stage('Run Tests') {
+            parallel {
+                stage('Test On Windows') {
+                    agent {
+                        label "windows"
+                    }
+                    steps {
+                        echo 'on windows'
+                    }
+                    
+                }
+                stage('Test On Linux') {
+                    agent {
+                        label "linux"
+                    }
+                    steps {
+                        echo 'on linux'
+                    }
+                    
+                }
+            }
+        }
+
+
