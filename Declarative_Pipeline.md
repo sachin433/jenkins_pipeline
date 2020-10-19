@@ -25,7 +25,7 @@ container('my-container') {
     // some block
 }
 
-//To pass interactive input:
+//To pass interactive input:(meant to stop further execution of pipeline.we can't  echo this parameter)
 input message: 'Please pass value', parameters: [string(defaultValue: 'Dummy', description: '', name: 'val1', trim: false)]
 
 //To print variable in pipeline
