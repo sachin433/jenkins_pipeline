@@ -63,8 +63,7 @@ stage('Run Tests') {
                     steps {
                         echo 'on windows'
                     }
-                    
-                }
+                    }
                 stage('Test On Linux') {
                     agent {
                         label "linux"
@@ -72,8 +71,7 @@ stage('Run Tests') {
                     steps {
                         echo 'on linux'
                     }
-                    
-                }
+                    }
             }
         }
 
