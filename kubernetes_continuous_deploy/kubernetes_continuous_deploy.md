@@ -10,3 +10,7 @@ for ex: Config Files= kubernetes_continuous_deploy/*.yaml
 Check "Enable Variable Substitution in Config"
 
 Provide "Docker Container Registry Credentials" if image has to pulled from private repository
+
+Declarative Pipeline script for above fuctioanlity will be as follows:
+
+kubernetesDeploy configs: 'kubernetes_continuous_deploy/*.yaml', credentialsType: 'SSH', kubeConfig: [path: ''], kubeconfigId: '', secretName: '', ssh: [sshCredentialsId: 'c1a63fa6-bc75-45be-938a-f7a7590a1a60', sshServer: 'xx.xx.xx.xx'], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
