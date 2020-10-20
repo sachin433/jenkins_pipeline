@@ -30,6 +30,8 @@ spec:
         }
         container('busybox') {
           echo 'inside busybox container'
+          sh '''ls -ltr'''
+          
         }
       }
     }
