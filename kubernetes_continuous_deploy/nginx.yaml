@@ -1,7 +1,6 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     run: nginx
   name: nginx
