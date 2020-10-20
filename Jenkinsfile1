@@ -27,10 +27,13 @@ spec:
       steps {
         container('maven') {
           sh 'mvn -version'
+          sh '''ls -ltr
+          pwd'''
         }
         container('busybox') {
           echo 'inside busybox container'
-          sh '''ls -ltr'''
+          sh '''ls -ltr
+          pwd'''
           
         }
       }
